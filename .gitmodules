@@ -1,0 +1,3 @@
+[submodule "serve"]
+	path = serve
+	url = https://github.com/JllRogen/server.git

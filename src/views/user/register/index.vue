@@ -1,0 +1,242 @@
+<template>
+  <div class="register-wrapper">
+    <div class="title">{{$t("user.register")}}</div>
+    <div class="form-box">
+      <!-- 手机号码 -->
+      <div class="input-box">
+        <svg t="1562220362997" class="icon svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1971" width="200" height="200"><path d="M511.997953 783.308149c-25.235754 0-45.768393 20.527522-45.768393 45.768393 0 25.235754 20.532639 45.76737 45.768393 45.76737 25.240871 0 45.772486-20.531616 45.772486-45.76737C557.77044 803.836695 537.238824 783.308149 511.997953 783.308149L511.997953 783.308149zM738.435149 62.897515 285.565874 62.897515c-38.101783 0-69.095681 30.994921-69.095681 69.095681l0 760.01463c0 38.101783 30.993898 69.095681 69.095681 69.095681l452.868251 0c38.10076 0 69.094658-30.993898 69.094658-69.095681L807.528783 131.992173C807.528783 93.892437 776.534885 62.897515 738.435149 62.897515L738.435149 62.897515zM285.565874 108.959597l452.868251 0c12.701277 0 23.032576 10.331299 23.032576 23.032576l0 569.397245L262.533298 701.389418 262.533298 131.992173C262.533298 119.290897 272.863574 108.959597 285.565874 108.959597L285.565874 108.959597zM738.435149 915.036309 285.565874 915.036309c-12.7023 0-23.032576-10.332323-23.032576-23.029506l0-140.612505 498.934426 0 0 140.612505C761.467725 904.709103 751.135402 915.036309 738.435149 915.036309L738.435149 915.036309zM738.435149 915.036309" p-id="1972" fill="#FA7133"></path></svg>
+        <rg-input ref="account" :placeholder="$t('user.accontPlacehold')" mask="99999999999" :max="11" v-model="account" is-type="china-mobile">
+          <!-- <icon slot="label" name="phone" class="form-icon"></icon> -->
+        </rg-input>
+      </div>
+      <!-- 验证码 -->
+      <div class="input-box">
+        <svg t="1561948154378" class="icon svg" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5238" width="200" height="200"><path d="M918.09 267.683c-36.098-2.493-72.38-9.274-103.495-19.238-10.076-3.03-20.161-6.388-30.307-10.02-21.385-6.3-50.481-18.793-83.506-36.593-0.354-0.162-0.704-0.364-1.053-0.553a758.213 758.213 0 0 1-23.794-13.412c-10.899-6.243-21.69-12.903-32.463-19.843-0.417-0.282-0.83-0.533-1.237-0.807a736.62 736.62 0 0 1-23.093-15.518c-4.976-3.414-9.96-7.052-14.945-10.66-3.749-2.748-7.497-5.33-11.248-8.165-27.428-20.486-54.5-43.47-79.85-68.233-25.35 24.762-52.426 47.747-79.854 68.233-3.744 2.834-7.498 5.417-11.246 8.165-4.991 3.608-9.97 7.246-14.945 10.66a740.312 740.312 0 0 1-23.095 15.518c-0.405 0.274-0.825 0.525-1.232 0.807-10.78 6.94-21.564 13.6-32.465 19.843a759.218 759.218 0 0 1-23.798 13.412c-0.346 0.187-0.704 0.39-1.046 0.553-33.026 17.8-62.128 30.293-83.516 36.592-10.138 3.638-20.216 6.992-30.302 10.021-31.118 9.964-67.39 16.745-103.496 19.238h-0.087c1.053 16.181 2.139 37.645 3.404 60.882 0.2 0 0.435 0 0.669-0.036 6.092 86.729 23.472 210.094 49.695 282.578 1.174 3.166 2.172 6.472 3.347 9.606 0.55 1.474 1.196 2.838 1.75 4.303 62.764 162.038 171.777 279.94 302.787 323.156v0.45c17.316 5.716 31.906 9.25 43.426 11.467 11.518-2.223 26.116-5.75 43.432-11.467v-0.45c131.012-43.215 240.018-161.118 302.788-323.156 0.555-1.476 1.199-2.83 1.757-4.303 1.167-3.134 2.169-6.44 3.34-9.606 26.227-72.485 43.606-195.85 49.7-282.578 0.237 0.034 0.474 0.034 0.67 0.034 1.262-23.235 2.343-44.697 3.398-60.88h-0.09z m-47.356 41.892l-0.51 9.497a40.555 40.555 0 0 0-1.02 6.623c-5.675 80.73-21.61 200.398-47.277 271.337-0.71 1.92-1.376 3.885-2.035 5.847-0.411 1.222-0.816 2.45-1.446 4.049a88.11 88.11 0 0 0-1.383 3.396c-58.358 150.646-158.712 259.11-275.335 297.58a45.262 45.262 0 0 0-5.458 2.2c-7.916 2.473-15.666 4.582-23.178 6.303-7.461-1.71-15.18-3.811-23.078-6.273a45.728 45.728 0 0 0-5.544-2.231C367.84 869.435 267.49 760.97 209.244 610.6c-0.459-1.207-0.94-2.377-1.693-4.148-0.443-1.179-0.84-2.394-1.251-3.61-0.664-1.964-1.333-3.932-1.934-5.56-25.76-71.2-41.695-190.87-47.365-271.583a40.1 40.1 0 0 0-1.028-6.644l-0.497-9.297-0.236-4.446c24.621-3.806 48.37-9.301 69.956-16.219 10.13-3.045 20.419-6.435 31.414-10.354 25.206-7.576 56.438-21.22 90.48-39.532 0.59-0.303 1.154-0.604 1.654-0.878a792.319 792.319 0 0 0 24.809-13.975c10.71-6.133 21.986-13.024 34.475-21.065 0.35-0.224 0.953-0.612 1.297-0.846 8.204-5.301 16.375-10.777 24.12-16.205 4.546-3.115 9.094-6.403 13.65-9.7l2.444-1.77 4.041-2.912c2.582-1.847 5.163-3.7 7.536-5.495a850.42 850.42 0 0 0 51.985-42.12 845.427 845.427 0 0 0 51.798 41.98c2.565 1.937 5.128 3.777 7.691 5.61l4.277 3.086 1.553 1.125c4.779 3.463 9.56 6.924 13.95 9.929a743.982 743.982 0 0 0 23.73 15.962l2.06 1.346c12.386 7.98 23.664 14.875 34.072 20.836a806.06 806.06 0 0 0 25.016 14.104c0.399 0.217 0.95 0.507 1.535 0.808 34.167 18.404 65.523 32.114 90.813 39.72 11.015 3.92 21.271 7.3 30.587 10.091 22.118 7.084 46.069 12.642 70.782 16.47l-0.23 4.267z m-159.473 102.08L476.928 651.833l-119.96-122.965c-8.311-8.516-21.773-8.516-30.084 0-8.311 8.523-8.311 22.32 0 30.84l135.003 138.378c4.155 4.26 9.597 6.39 15.041 6.39 5.444 0 10.887-2.13 15.04-6.39l249.375-255.592c8.312-8.516 8.312-22.316 0-30.837-8.309-8.518-21.771-8.518-30.082 0z" p-id="5239" fill="#FA7133"></path></svg>
+        <rg-input ref="code" v-model="code" mask="9999" :max="4" :min="4" :showClear="false" :showWarn="false" :placeholder="$t('user.validPlacehold')">
+          <!-- <icon slot="label" name="verification" class="form-icon"></icon> -->
+          <span class="authCode" slot="right" @click="onClickSendCode">{{$t('user.valid')}}</span>
+        </rg-input>
+      </div>
+      <!-- 密码 -->
+      <!-- <pwd-input v-model="pwd" placeholder="Silakan masukkan kata sandi Anda"></pwd-input> -->
+      <div class="input-box">
+        <svg class="svg" t="1561948837248" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6904" width="200" height="200"><path d="M795.753087 396.817678l-29.925566 0L765.827521 279.989879c0-140.375098-99.423407-250.359025-240.645802-250.359025-141.772934 0-238.402715 112.313995-238.402715 250.359025l0 116.827799-29.936823 0c-66.042135 0-119.746268 54.846142-119.746268 122.372072l0 367.089609c0 67.50137 53.703109 122.394584 119.746268 122.394584l538.910906 0c66.067718 0 119.771851-54.894238 119.771851-122.394584L915.524938 519.189749C915.524938 451.662797 861.819782 396.817678 795.753087 396.817678L795.753087 396.817678zM346.64037 279.989879c0-104.244202 69.78232-189.161221 178.541349-189.161221 107.631346 0 180.7609 83.101673 180.7609 189.161221l0 116.827799L346.64037 396.817678 346.64037 279.989879 346.64037 279.989879zM855.614453 886.279359c0 33.750685-26.845415 61.198827-59.861366 61.198827L256.842181 947.478186c-33.026184 0-59.884902-27.447119-59.884902-61.198827L196.957279 519.189749c0-33.727149 26.857694-61.173245 59.884902-61.173245l538.910906 0c33.015951 0 59.861366 27.446096 59.861366 61.173245L855.614453 886.279359 855.614453 886.279359zM526.298146 580.313875c-33.05279 0-59.862389 27.471678-59.862389 61.245899 0 22.665209 12.043291 42.409902 29.9358 52.981678l0 100.001575c0 16.875343 13.405311 30.562063 29.92659 30.562063 16.542768 0 29.936823-13.68672 29.936823-30.562063L556.234969 694.541453c17.879206-10.571776 29.949103-30.316469 29.949103-52.981678C586.184071 607.785553 559.362192 580.313875 526.298146 580.313875L526.298146 580.313875 526.298146 580.313875z" p-id="6905" fill="#FA7133"></path></svg>
+        <rg-input ref="pwd" type="password" v-model="pwd" :max="18" :min="6" :placeholder="$t('user.pwdPlacehold')" :is-type="pwdValid">
+          <!-- <icon slot="label" name="lock" class="form-icon"></icon> -->
+        </rg-input>
+      </div>
+    </div>
+
+    <div class="btn-box">
+      <!-- <btn  type="primary" style="width: 96%" @click.native="onClickRegister">{{$t("user.commit")}}</btn> -->
+      <div class="pact">
+        <van-checkbox icon-size="14px" v-model="checked" checked-color="#f8ad8c">
+          <div class="pactBox">
+            <div class="pactP">点击同意用户协议</div>
+            <div class="pactSpan" @click="read">《拉卡贷用户协议》</div>
+            <!-- <router-link to="/user/urlView" tag="div" class="pactSpan">《拉卡贷用户协议》</router-link> -->
+          </div>
+        </van-checkbox>
+      </div>     
+      <button class="con" style="width: 100%" @click="onClickRegister">注册</button>
+      <div class="text" @click="onClickFindPwd">{{$t("user.forgetPwd")}}?</div>
+    </div>
+  </div>
+</template>
+
+<script>
+import { mapActions } from "vuex";
+import { getAboutUrl } from "../../../api/user/index"
+import Input from "@/components/input";
+import axios from "axios"
+// import PwdInput from '../components/pwdInput';
+export default {
+  name: "register",
+  components: {
+    rgInput: Input,
+    // PwdInput,
+  },
+  data() {
+    return {
+      // account: "17724736829",
+      checked: "true",
+      account: "",
+      code: "",
+      pwd: "",
+      linkUrl: [],
+      // pwd: "123456"
+    };
+  },
+  mounted(){
+     axios.post(
+       "http://www.luckyjz.com/getAboutUrl",
+       {},
+       {headers:{
+         'Content-Type' : 'application/json',
+         'opSource' : 'ANDROID',
+         'subKey' : 'HC',
+         'storeKey' : 'VIVO',
+       }}
+     )
+    // getAboutUrl()
+     .then(res => {
+        this.linkUrl = res.data.data.protocolUrl
+     })
+     .then(error =>{
+       console.log(error)
+     })
+
+  },
+  methods: {  
+    read(){
+      // let link = this.linkUrl
+      // console.log("跳转链接",link)
+      // console.log("原",this.checked)
+      // this.checked = !this.checked
+      // console.log("现",this.checked)
+      // this.$router.push({
+      //   name:"urlView",
+      //   query:{
+      //     link:link
+      //   }
+      // })
+
+      this.$router.push({name:"pact"})
+
+     },
+  ...mapActions({
+      getVeriCode: "user/getVeriCode",
+      register: "user/register"
+    }),
+    pwdValid(value) {
+      return {
+        valid: value.length >= 6,
+        msg: "密码长度不正确"
+      };
+    },
+    onClickRegister() {
+      let $refs = this.$refs;
+      if (!$refs.account.valid) {
+        this.$toast.show(this.$t('user.accountError'));
+        return;
+      }
+      if (!$refs.code.valid || !this.code) {
+        this.$toast.show($refs.code.msg || this.$t('user.validError'));
+        return;
+      }
+      if (!$refs.pwd.valid) {
+        this.$toast.show(this.$t('user.pwdError'));
+        return;
+      }
+      
+      // this.register({ loginName: this.account, password: this.pwd }).then(() => {
+      //   this.$router.replace({ name: "login" });
+      // }, (error) => {
+      //   console.log(error)
+      // });
+      if(this.checked){
+        this.register({ loginName: this.account, password: this.pwd }).then(() => {
+          this.$router.replace({ name: "login" });
+        }, (error) => {
+            console.log(error)
+        });
+      }else{
+        alert("请正确填写信息并阅读用户协议")
+      }
+
+    },
+    // 点击找回密码
+    onClickFindPwd() {
+      this.$router.push({ name: "findPwd" })
+    },
+    //点击发送验证码
+    onClickSendCode() {
+      if (!this.$refs.account.valid) {
+        this.$toast.show(this.$t('user.accountError'));
+        return;
+      }
+      this.getVeriCode({ loginName: "" + this.account }).then(data => {
+        console.log(data)
+      }, (error) => {
+        console.log(error)
+      })
+    },
+
+  }
+};
+</script>
+<style lang="stylus"  scoped>
+.register-wrapper
+  .title
+    padding-right 50px
+    font-size 24px
+    color #F8AD8C
+    text-align center
+    font-weight bold
+.form-box
+  margin-top 0.7rem
+  .input-box
+    border-bottom 1px solid #D2D2D2
+    margin-bottom 10px
+    display flex
+.form-icon
+  margin-right 10px
+  color #4B79D4
+.reg-box
+  color #4B79D4
+  text-align right
+  font-size 10px
+.btn-box
+  margin-top 20px
+  .text
+    margin-top 5px
+    font-size 10px
+    color #676767
+.svg
+  height 20px
+  width 20px 
+  margin 12px 13px 0
+.left20
+  margin-left -20px
+.con
+  border none
+  position relative
+  display block
+  margin-left auto
+  margin-right auto
+  margin-top 10px
+  padding-left 14px
+  padding-right 14px
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  font-size 18px
+  text-align center
+  text-decoration none
+  color #ffffff
+  line-height 2.33333333
+  border-radius 5px
+  -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+  overflow: hidden
+  background-color #F8AD8C
+.authCode{
+  margin-left:20px;
+  color: #F8AD8C;
+}
+.van-icon{
+  font-size: 1px
+}
+.pactBox{
+  display: flex;
+}
+.pactP{
+  color:F7F7F7;
+  font-size:12px;
+}
+.pactSpan{
+  color:#F8AD8C;
+}
+.van-icon{
+  background-color: orangered;
+  border-color: red;
+}
+</style>

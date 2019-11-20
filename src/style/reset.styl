@@ -1,0 +1,33 @@
+@import 'variable/global.styl'
+html
+	font-size 26.666666vw // 10000 / 375  ( 以375的屏幕宽度为标准 1rem = 100px)
+	-webkit-text-size-adjust none
+	-webkit-font-smoothing antialiased
+	-ms-text-size-adjust 100%
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	margin 0
+	padding 0
+	-webkit-tap-highlight-color rgba(0, 0, 0, 0) // 针对iOS的设置,
+	outline 0
+div
+	box-sizing border-box
+	&.content-box
+		box-sizing content-box
+body, html
+	height 100%
+	background-color #fff
+body
+	-moz-user-select none /* 火狐 */
+	-webkit-user-select none /* webkit浏览器 */
+	-ms-user-select none /* IE10 */
+	-khtml-user-select none /* 早期浏览器 */
+	user-select none
+	font-size 14px
+	line-height 1.6
+	font-family $fontDefault
+img, svg, input, textarea
+	vertical-align middle
+a img
+	border 0
+a
+	text-decoration none
